@@ -45,7 +45,17 @@ function DisplayProducts() {
             </p>
             <br></br>
             <br></br>
-
+            <div>
+              {product.images.map((img, key) => (
+                <img
+                  key={key}
+                  src={img}
+                  alt="beauty"
+                  width="200px"
+                  height="100px"
+                />
+              ))}
+            </div>
             <p style={{ fontSize: "36px", color: "white", fontWeight: "bold" }}>
               {`${product.category} 💇‍♀️`}
             </p>
@@ -71,12 +81,12 @@ function DisplayProducts() {
             >{`☞ ☞ ${product.stock} Stock will be remain `}</p>
             <br></br>
             <div className="product-items">
-              <p style={{ fontSize: "30px", color: "orange" }}>
+              <p style={{ fontSize: "30px", color: "black" }}>
                 {`${product.tags} `}
               </p>
               <br></br>
 
-              <p style={{ fontSize: "30px", color: "orange" }}>
+              <p style={{ fontSize: "30px", color: "black" }}>
                 {`Brand is ${product.brand}`}
               </p>
             </div>
@@ -90,24 +100,25 @@ function DisplayProducts() {
             >{`SKU ${product.sku}`}</p>
             <br></br>
 
-            <ul style={{ fontSize: "30px", color: "orange" }}>
+            <ul style={{ fontSize: "30px", color: "black" }}>
               <li>{` ${product.warrantyInformation} 🤝`}</li>
               <li>{`${product.shippingInformation}🚢`}</li>
               <li>{product.availabilityStatus}</li>
             </ul>
             {/* <p>{product.dimensions}</p> */}
 
-            {/* <p>
+            {/* <div>
               {product.reviews.map((val, index) => (
-                <p key={index}>{val}</p>
+                <p key={index}>Review: {val.comment}</p>
               ))}
-            </p> */}
+            </div> */}
+
             <br></br>
             <p style={{ fontSize: "30px", color: "white" }}>
               {`↪ ${product.returnPolicy} ↩`}
             </p>
             <br></br>
-            <p style={{ fontSize: "30px", color: "orange" }}>
+            <p style={{ fontSize: "30px", color: "blue" }}>
               <u>DESCRIPTION: </u>
               {product.description}
               <br></br>

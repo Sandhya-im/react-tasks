@@ -87,7 +87,7 @@ function AddProducts() {
             value={
               formData.price === "" || formData.discount === ""
                 ? (formData.total = "")
-                : (formData.total = formData.total =
+                : (formData.total =
                     formData.price + 18 / 100 - formData.discount)
             }
             onChange={(e) => {
